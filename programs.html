@@ -26,12 +26,10 @@
 
   <script>
     function init() {
-      alert("init");
-      for (var item in programs) {
-          alert(item);
+      for (const [key, item] of Object.entries(programs)) {
           var p = document.createElement('P');
           p.onclick = function () {
-            window.open(`https://ntillier.github.io/show-program?id=${item}`);
+            window.open(`https://ntillier.github.io/show-program?id=${key}`);
           };
           var img = document.createElement('IMG');
           img.src = item.image;
