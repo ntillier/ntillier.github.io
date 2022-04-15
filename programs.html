@@ -26,7 +26,9 @@
 
   <script>
     function init() {
+      alert("init");
       for (var item in programs) {
+          alert(item);
           var p = document.createElement('P');
           p.onclick = function () {
             window.open(`https://ntillier.github.io/show-program?id=${item}`);
