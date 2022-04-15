@@ -61,7 +61,7 @@
       const name = new URLSearchParams(query).get('name');
       const width = new URLSearchParams(query).get('width');
       const height = new URLSearchParams(query).get('height');
-      const types = new URLSearchParams(query).get('types').split("+");
+      const types = new URLSearchParams(query).get('types').split(" ");
       const date = new URLSearchParams(query).get('date');
       const description = new URLSearchParams(query).get('description');
 
