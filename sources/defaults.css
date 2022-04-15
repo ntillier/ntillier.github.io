@@ -1,0 +1,310 @@
+::selection {
+  background: #ccc;
+}
+:root {
+  --blue: rgb(117, 162, 245);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: cursive;
+  overflow-y: auto;
+  z-index: 1;
+  background: var(--background);
+}
+header {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+  background: var(--blue);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0.5em #ccc;
+  top: 10px;
+  left: 2%;
+  width: 96%;
+  height: 80px;
+}
+header label {
+  font-weight: bold;
+  font-family: 'The Nautigal';
+  font-size: 40px;
+  color: white;
+}
+header div {
+  display: block;
+  position: relative;
+  float: right;
+  right: 20px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  height: 80%;
+  top: 10%;
+}
+header a {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  padding: 7px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+}
+header a:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: white;
+  transition: width 0.2s, left 0.2s, height 0.2s, top 0.2s, background 0.2s;
+  transition-delay: 0s, 0s, 0.5s, 0.5s, 0.5s;
+}
+header a:hover:after {
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.1);
+}
+article {
+  position: relative;
+  margin: 20px 10% 0 10%;
+  padding: 2%;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+  font-size: 18px;
+}
+article img {
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  min-width: 40%;
+  max-width: 60%;
+}
+article a {
+  text-decoration: none;
+  border-bottom: dotted 1px var(--blue);
+  cursor: pointer;
+  color: var(--blue);
+}
+article h1 {
+  font-family: 'The Nautigal';
+  font-size: 60px;
+  margin: 10px;
+}
+p {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  min-height: 160px;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+  border: solid 1px var(--blue);
+  background: var(--blue);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  width: 40%;
+  transition: 0.2s;
+  height: 40vh;
+  box-sizing: initial;
+}
+p:hover {
+  box-shadow: 2px 2px 0.5em #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+p * {
+  pointer-events: none;
+}
+p img {
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  max-height: 150px;
+  height: 90%;
+  top: 5%;
+  float: left;
+  margin: 0 20px;
+}
+p label {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  font-size: 25px;
+}
+p.right img {
+  float: right;
+}
+p i {
+  display: block;
+  text-align: center;
+}
+footer {
+  background: #eee;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+}
+footer div {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 50%;
+  min-width: 180px;
+  margin: 0 auto;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+  border-bottom: dotted 1px black;
+}
+footer span {
+  display: block;
+}
+footer img {
+  display: block;
+  margin: 20px auto;
+  width: 50px;
+  border-radius: 100px;
+}
+input,
+textarea {
+  padding: 8px;
+  border: none;
+  outline: none;
+  background: #eee;
+  margin-top: 5px;
+  border-bottom: solid 2px #eee;
+  transition: 0.2s;
+  display: block;
+}
+input:focus,
+textarea:focus {
+  border-bottom: solid 2px #ccc;
+}
+textarea {
+  width: 80%;
+  height: 200px;
+  max-width: 100%;
+  max-height: 250px;
+}
+textarea {
+  height: 10000vh;
+}
+button {
+  background: var(--blue);
+  display: block;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+button:hover {
+  margin: 3px;
+  padding: 10px;
+}
+input[type='radio'] {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  border: 0px;
+  vertical-align: middle;
+  visibility: hidden;
+  height: 1.5em;
+  width: 1.5em;
+}
+input[type='radio']:after,
+input[type='radio']:before {
+  content: '';
+  position: absolute;
+  visibility: visible;
+  border: solid 1px var(--blue);
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+}
+input[type='radio']:before {
+  transform: scale(0);
+  background: var(--blue);
+  transition: transform 0.1s;
+}
+input[type='radio']:checked:before {
+  transform: scale(1);
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 35px;
+  }
+  header {
+    height: auto;
+  }
+  header label {
+    display: block;
+    text-align: center;
+  }
+  header div {
+    position: relative;
+    display: block;
+    width: 90%;
+    left: 5%;
+    float: initial;
+    height: auto;
+  }
+  header a {
+    display: block;
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: auto;
+    text-align: center;
+  }
+  article {
+    position: relative;
+    display: block;
+    width: 90%;
+    left: 5%;
+    margin: 0px;
+    margin-bottom: 20px;
+    top: 20px;
+  }
+  p,
+  p:hover {
+    display: block;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    margin: 10px 0 10px 0;
+    padding: 0px;
+    height: auto;
+  }
+  p img {
+    float: initial;
+    width: 50%;
+    max-width: 50px;
+    margin: 0 auto;
+  }
+}
