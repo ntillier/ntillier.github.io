@@ -145,6 +145,7 @@ p img {
   top: 5%;
   float: left;
   margin: 0 20px;
+  background: white;
 }
 p label {
   font-weight: bold;
