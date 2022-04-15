@@ -27,8 +27,6 @@
   <script>
     function init() {
       for (const [key, item] of Object.entries(programs)) {
-          document.querySelector("article").innerHTML += `${key} - ${item}<br>`;
-        
           var p = document.createElement('P');
           p.onclick = function () {
             window.open(`https://ntillier.github.io/show-program?id=${key}`);
