@@ -37,7 +37,7 @@ header {
 header label {
   font-weight: bold;
   font-family: 'The Nautigal';
-  font-size: 4em;
+  font-size: 2em;
   color: white;
 }
 header div {
@@ -61,7 +61,6 @@ header a {
   text-decoration: none;
   color: white;
   margin: 0 10px;
-  font-size: 2em;
 }
 header a:after {
   content: '';
