@@ -12,6 +12,7 @@ body {
   font-family: cursive;
   overflow-y: auto;
   z-index: 1;
+  font-size: 1.8em;
   background: var(--background);
   display: flex;
   flex-direction: column;
@@ -87,7 +88,7 @@ article {
   text-align: justify;
   text-justify: inter-word;
   overflow: hidden;
-  font-size: 18px;
+  font-size: 1.8em;
   flex: 1;
 }
 article img {
@@ -105,7 +106,7 @@ article a {
 }
 article h1 {
   font-family: 'The Nautigal';
-  font-size: 60px;
+  font-size: 6em;
   margin: 10px;
 }
 p {
@@ -119,7 +120,7 @@ p {
   border: solid 1px var(--blue);
   background: var(--blue);
   color: white;
-  font-size: 18px;
+  font-size: 1.8em;
   cursor: pointer;
   margin: 20px;
   padding: 10px;
@@ -152,7 +153,7 @@ p label {
   font-weight: bold;
   display: block;
   text-align: center;
-  font-size: 25px;
+  font-size: 2.5em;
 }
 p.right img {
   float: right;
@@ -263,7 +264,7 @@ input[type='radio']:checked:before {
 }
 @media only screen and (max-width: 1000px) {
   html {
-    font-size: 35px;
+    font-size: 3.5em;
   }
   header {
     height: auto;
