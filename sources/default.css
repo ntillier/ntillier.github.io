@@ -13,6 +13,9 @@ body {
   overflow-y: auto;
   z-index: 1;
   background: var(--background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 header {
   position: relative;
@@ -85,6 +88,7 @@ article {
   text-justify: inter-word;
   overflow: hidden;
   font-size: 18px;
+  flex: 1;
 }
 article img {
   position: relative;
