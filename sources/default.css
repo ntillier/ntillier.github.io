@@ -127,6 +127,7 @@ p {
   transition: 0.2s;
   height: 40vh;
   box-sizing: initial;
+  vertical-align: baseline;
 }
 p:hover {
   box-shadow: 2px 2px 0.5em #ccc;
