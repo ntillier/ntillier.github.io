@@ -108,6 +108,9 @@ article h1 {
   font-family: 'The Nautigal';
   font-size: 6em;
   margin: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 p {
   position: relative;
