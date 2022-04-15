@@ -128,7 +128,7 @@ p {
   padding: 10px;
   width: 40%;
   transition: 0.2s;
-  height: auto;
+  height: 30vh;
   box-sizing: initial;
   vertical-align: baseline;
 }
