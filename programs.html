@@ -22,7 +22,10 @@
     <article>
       <h1>Programs</h1>
       You can see here all the programs I've made since I have started programing. I hope you will enjoy seeing them.<br>
-      Some programs are a lot better than others, and the list isn't sorted.
+      Some programs are a lot better than others, and the list isn't sorted.<br>
+    </article>
+    
+    <article id="programs">
     </article>
   </body>
 
@@ -50,7 +53,7 @@
           p.appendChild(img);
           p.innerHTML += `<label>${item.name}</label><br><i>${item.date}</i>`;
 
-          document.querySelector('article').appendChild(p);
+          document.getElementById('programs').appendChild(p);
       }
     }
   </script>
