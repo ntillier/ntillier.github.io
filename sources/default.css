@@ -267,7 +267,7 @@ input[type='radio']:checked:before {
 @media only screen and (max-width: 1000px) {
   html {
     font-size: 3.5em;
-    font-family: sans-serif;
+    font-family: monospace;
   }
   header {
     height: auto;
