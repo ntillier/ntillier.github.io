@@ -7,12 +7,14 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 1.8em;
+}
 body {
   margin: 0px;
   font-family: cursive;
   overflow-y: auto;
   z-index: 1;
-  font-size: 1.8em;
   background: var(--background);
   display: flex;
   flex-direction: column;
@@ -35,7 +37,7 @@ header {
 header label {
   font-weight: bold;
   font-family: 'The Nautigal';
-  font-size: 40px;
+  font-size: 4em;
   color: white;
 }
 header div {
@@ -58,7 +60,6 @@ header a {
   padding: 7px;
   text-decoration: none;
   color: white;
-  font-size: 18px;
   margin: 0 10px;
 }
 header a:after {
@@ -88,7 +89,6 @@ article {
   text-align: justify;
   text-justify: inter-word;
   overflow: hidden;
-  font-size: 1.8em;
   flex: 1;
 }
 article img {
@@ -120,7 +120,6 @@ p {
   border: solid 1px var(--blue);
   background: var(--blue);
   color: white;
-  font-size: 1.8em;
   cursor: pointer;
   margin: 20px;
   padding: 10px;
