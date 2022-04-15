@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOME</title>
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/nathanTi-Programing/nathantiprograming-webpage/master/logo.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sources/default.css" />
 
+    <script src="./sources/default.js"></script>
+    <script src="./datas/programs.json"></script>
+  </head>
+
+  <header></header>
+
+  <body onload="init()">
+    <article></article>
+  </body>
+
+  <footer></footer>
+
+  <script>
+    function init(id) {
+      programs.forEach((item) => {
+          var p = document.createElement('P');
+          p.onclick = function () {
+            window.open(`https://ntillier.github.io/show-program?id=${item}`);
+          };
+          var img = document.createElement('IMG');
+          img.src = item.image;
+
+          p.appendChild(img);
+          p.innerHTML += `<label>${item.name}</label>${item.description}<br><i>${item.date}</i>`;
+
+          document.querySelector('article').appendChild(p);
+      });
+    }
+  </script>
+</html>
