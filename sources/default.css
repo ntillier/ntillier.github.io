@@ -312,6 +312,7 @@ input[type='radio']:checked:before {
   p img {
     float: initial;
     width: 50%;
+    height: auto;
     max-width: 50px;
     margin: 0 auto;
   }
