@@ -87,7 +87,7 @@ header ul:focus + div {
   display: block;
 }
 header ul:focus {
-  right: -50vw;
+  display: none;
 }
 
 article {
