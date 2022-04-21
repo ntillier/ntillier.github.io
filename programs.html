@@ -47,11 +47,8 @@
           p.onclick = function () {
             window.open(`https://ntillier.github.io/show-program?id=${key}&${infos.join("&")}`);
           };
-          var img = document.createElement('IMG');
-          img.src = item.image;
-
-          p.appendChild(img);
-          p.innerHTML += `<label>${item.name}</label><i>${item.date}</i>`;
+        
+          p.innerHTML += `<label>${item.name}</label><img src='${item.image}'><span>${item.description}</span><i>${item.date}</i>`;
 
           document.getElementById('programs').appendChild(p);
       }
