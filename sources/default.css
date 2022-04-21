@@ -1,95 +1,105 @@
-::selection {
-  background: #ccc;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.4s;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: sans-serif;
 }
 :root {
   --blue: rgb(117, 162, 245);
 }
-* {
-  box-sizing: border-box;
-}
-html {
-  font-size: 1.5em;
-}
-body {
-  margin: 0px;
-  font-family: cursive;
-  overflow-y: auto;
-  z-index: 1;
-  background: var(--background);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 header {
-  position: relative;
-  display: block;
-  overflow: hidden;
+  position: sticky;
+  top: 0px;
   z-index: 2;
   background: var(--blue);
-  padding: 10px;
-  border-radius: 15px;
   box-shadow: 3px 3px 0.5em #ccc;
-  top: 10px;
-  left: 2%;
-  width: 96%;
-  height: 80px;
+  width: 100%;
+  height: 4em;
+}
+header:stuck {
+  background: red;
 }
 header label {
   font-weight: bold;
   font-family: 'The Nautigal';
-  font-size: 2em;
+  font-size: 3em;
   color: white;
+  float: left;
+  position: relative;
+  line-height: 1.5em;
+  left: 0.2em;
+  cursor: pointer;
 }
-header div {
+header ul {
   display: block;
   position: relative;
   float: right;
-  right: 20px;
+  top: 0.5em;
+  height: 3em;
+  width: 3.5em;
+  right: 0.5em;
   list-style: none;
-  padding: 0px;
-  margin: 0px;
-  height: 80%;
-  top: 10%;
-}
-header a {
-  display: inline-block;
-  font-weight: bold;
   cursor: pointer;
+}
+header ul li {
   position: relative;
-  height: 100%;
-  padding: 7px;
+  display: block;
+  background: white;
+  left: 2%;
+  width: 96%;
+  height: 15%;
+  margin-top: 12.5%;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+header ul:hover li {
+  background: #ccc;
+}
+header div {
+  position: fixed;
+  display: block;
+  top: 4em;
+  height: calc(100vh - 4em);
+  background: var(--blue);
+  left: 100vw;
+  width: 100vw;
+  z-index: 5;
+}
+header div a {
   text-decoration: none;
   color: white;
-  margin: 0 10px;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  height: 20%;
+  line-height: 4em;
+  border-top: solid 1px #ccc;
+  margin: 0 2em;
+  font-weight: bold;
+  cursor: pointer;
 }
-header a:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 100%;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  border-radius: 5px;
-  background: white;
-  transition: width 0.2s, left 0.2s, height 0.2s, top 0.2s, background 0.2s;
-  transition-delay: 0s, 0s, 0.5s, 0.5s, 0.5s;
-}
-header a:hover:after {
+
+header ul:focus + div {
   left: 0;
-  width: 100%;
-  top: 0;
-  height: 100%;
-  background: rgb(0, 0, 0, 0.1);
 }
+header ul:focus {
+  right: -50vw;
+}
+
 article {
   position: relative;
-  margin: 20px 10% 0 10%;
-  padding: 2%;
+  margin: 20px 10px;
   text-align: justify;
   text-justify: inter-word;
   overflow: hidden;
-  flex: 1;
+  font-size: 18px;
+  min-height: 70vh;
 }
 article img {
   position: relative;
@@ -106,64 +116,58 @@ article a {
 }
 article h1 {
   font-family: 'The Nautigal';
-  font-size: 6em;
+  font-size: 60px;
   margin: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
+
 p {
+  border-top: solid 1px #ccc;
+  margin: 0px;
+  padding: 20px;
+  height: 20vh;
+  width: 100%;
+  display: block;
   position: relative;
-  display: inline-block;
-  border-radius: 15px;
-  min-height: 160px;
-  text-align: justify;
-  text-justify: inter-word;
-  overflow: hidden;
-  border: solid 1px var(--blue);
-  background: var(--blue);
-  color: white;
+  background: white;
   cursor: pointer;
-  margin: 20px;
-  padding: 10px;
-  width: 40vh;
-  transition: 0.2s;
-  height: 30vh;
-  box-sizing: initial;
-  vertical-align: baseline;
 }
 p:hover {
-  box-shadow: 2px 2px 0.5em #ccc;
-  padding: 20px;
-  margin: 10px;
+  background: #eee;
 }
-p * {
-  pointer-events: none;
+p span {
+  display: none;
 }
 p img {
-  border-radius: 10px;
-  position: relative;
-  display: block;
-  max-height: 150px;
   height: 90%;
   top: 5%;
+  width: auto;
   float: left;
-  margin: 0 20px;
-  background: white;
+  margin-right: 10px;
+  min-width: initial;
 }
 p label {
-  font-weight: bold;
-  display: block;
-  text-align: center;
-  font-size: 1.8em;
-}
-p.right img {
   float: right;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  top: 10%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  right: 10px;
+  width: 70%;
 }
 p i {
-  display: block;
+  float: right;
   text-align: center;
+  position: relative;
+  display: block;
+  top: 20%;
+  width: 70%;
+  margin: auto;
 }
+
 footer {
   background: #eee;
   padding: 10px;
@@ -264,61 +268,134 @@ input[type='radio']:before {
 input[type='radio']:checked:before {
   transform: scale(1);
 }
-@media only screen and (max-width: 1000px) {
-  html {
-    font-size: 3.5em;
-    font-family: monospace;
-  }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
   header {
-    height: auto;
-  }
-  header label {
+    position: relative;
     display: block;
-    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 15px;
+    top: 10px;
+    left: 2%;
+    width: 96%;
+    height: 80px;
+  }
+  header ul {
+    display: none;
   }
   header div {
-    position: relative;
     display: block;
-    width: 90%;
-    left: 5%;
-    float: initial;
-    height: auto;
+    position: relative;
+    float: right;
+    right: 20px;
+    left: auto;
+    height: 80%;
+    top: 10%;
+    width: auto;
+    overflow: hidden;
   }
-  header a {
-    display: block;
+  header div a {
+    display: inline-block;
     position: relative;
-    width: 80%;
-    left: 10%;
-    height: auto;
-    text-align: center;
+    border: none;
+    height: 100%;
+    padding: 0 0.5em;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    margin: 0 0.2em;
+  }
+
+  header a:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    background: rgb(0, 0, 0, 0.1);
+    transition: 0.1s;
+    border-radius: 10px;
+  }
+  header a:hover:after {
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
   }
   article {
-    position: relative;
-    display: block;
-    width: 90%;
-    left: 5%;
-    margin: 0px;
-    margin-bottom: 20px;
-    top: 20px;
+    margin: 20px 10% 0 10%;
+    padding: 2%;
   }
-  p,
-  p:hover {
-    display: block;
+  p {
     position: relative;
-    width: 90%;
-    left: 5%;
-    margin: 10px 0 10px 0;
-    padding: 0px;
-    height: auto;
+    display: inline-block;
+    border-radius: 15px;
+    min-height: 200px;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: hidden;
+    border: solid 1px var(--blue);
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    width: 40%;
+    height: 30vh;
+    box-sizing: initial;
+    vertical-align: baseline;
+    transition: 0.3s;
+  }
+  p:hover {
+    box-shadow: 2px 2px 0.5em #ccc;
+    padding: 20px;
+    margin: 10px;
+    background: var(--blue);
+  }
+  p * {
+    pointer-events: none;
+    float: initial;
+    position: relative;
+    display: block;
   }
   p img {
-    float: initial;
-    width: 50%;
+    border-radius: 10px;
+    max-height: 150px;
     height: auto;
-    max-width: 50px;
-    margin: 0 auto;
+    top: 0;
+    min-width: 100px;
+    width: 30%;
+    background: white;
+    display: inline-block;
   }
   p label {
+    font-weight: bold;
+    text-align: center;
     font-size: 1.8em;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: auto;
+  }
+  p span {
+    display: inline-block;
+    width: 65%;
+    height: auto;
+    max-height: 60%;
+    overflow: hidden;
+    top: 1em;
+  }
+  p i {
+    text-align: center;
+    width: 60%;
+    height: auto;
+    position: relative;
   }
 }
