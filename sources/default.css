@@ -44,6 +44,9 @@ header ul {
   right: 0.5em;
   list-style: none;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.4s, display 0.1s;
+  transition-delay: 0s, 0.4s;
 }
 header ul li {
   position: relative;
@@ -68,6 +71,9 @@ header div {
   width: 100vw;
   z-index: 5;
   display: none;
+  opacity: 0;
+  transition: opacity 0.4s, display 0.1s;
+  transition-delay: 0s, 0.4s;
 }
 header div a {
   text-decoration: none;
@@ -85,9 +91,11 @@ header div a {
 
 header ul:focus + div {
   display: block;
+  opacity: 1;
 }
 header ul:focus {
   display: none;
+  opacity: 0;
 }
 
 article {
