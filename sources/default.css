@@ -273,7 +273,7 @@ input[type='radio']:checked:before {
   /* For tablets: */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-aspect-ratio: 5/4) and (min-width: 800px) {
   /* For desktop: */
   header {
     position: relative;
