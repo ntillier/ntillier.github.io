@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: sans-serif;
+  font-size: 2em;
 }
 :root {
   --blue: rgb(117, 162, 245);
@@ -269,12 +270,10 @@ input[type='radio']:checked:before {
   transform: scale(1);
 }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-}
-
 @media only screen and (min-aspect-ratio: 5/4) and (min-width: 800px) {
-  /* For desktop: */
+  body {
+    font-size: 1em;
+  }
   header {
     position: relative;
     display: block;
