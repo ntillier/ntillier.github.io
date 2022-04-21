@@ -55,7 +55,7 @@
   <footer></footer>
 
   <script>
-    (function () {
+    function init() {
       const query = window.location.search;
       const id = new URLSearchParams(query).get('id');
       const name = new URLSearchParams(query).get('name');
@@ -82,6 +82,6 @@
       var s = document.documentElement.style;
       s.setProperty('--width', `${width}px`);
       s.setProperty('--height', `${height}px`);
-    })();
+    }
   </script>
 </html>
