@@ -1,0 +1,21 @@
+{
+  "title": "Tutorials",
+  "description": "You can find there all the tutorials I've made. I hope you'll like them!",
+  "list": [
+    {
+      "href": "/tutorials/html-intro",
+      "title": "Introduction to webpages",
+      "description": "Let's learn to create webpages!"
+    },
+    {
+      "title": "Qwant's API",
+      "description": "In this tutorial, you will send GET requests to an API endpoint. You will retrieve the results of a query, and present them to the user.",
+      "href": "/tutorials/qwant-api"
+    },
+    {
+      "title": "NodeJS",
+      "description": "In this tutorial, you will learn to create your first app using NodeJS.",
+      "href": "/tutorials/nodejs"
+    }
+  ]
+}
