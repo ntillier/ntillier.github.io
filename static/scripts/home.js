@@ -23,6 +23,13 @@
     }
     return tile;
   }
+   makeRequest("GET", '/api/tutorials.json', {})
+  .then((datas) => {
+    alert(datas.title);
+   })
+  .catch((err) => {
+      alert(err);
+   });
   makeRequest("GET", 'https://nathanti.repl.co/api/news', {})
   .then((datas) => {
     CLASS('load').remove();
