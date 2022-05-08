@@ -1,0 +1,23 @@
+{
+  "content": "###Hello world!\n\nYou can find here some tutorials, tools, and programs I've made.\nScroll down to discover the newest releases!",
+  "img": "https://raw.githubusercontent.com/ntillier/website/main/Logo.svg",
+  "list": [
+    {
+      "href": "/tutorials/html-intro",
+      "label": "Introduction to webpages",
+      "description": "Let's learn to create webpages!"
+    },
+    {
+      "label": "Tutorial: Qwant's API",
+      "href": "/tutorials/qwant-api",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Qwant_new_logo_2018.svg/640px-Qwant_new_logo_2018.svg.png",
+      "description": "Do you know you can create a real search engine for you? If not, see this! With the API from Qwant, you'll have the results of your query, in real time!"
+    },
+    {
+      "label": "Search engine",
+      "href": "/tools/search-engine/view",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Search_Icon.png/640px-Search_Icon.png",
+      "description": "Do you know you can create a real search engine for you? If not, see this! With the API from Qwant, you'll have the results of your query, in real time!"
+    }
+  ]
+}
