@@ -85,7 +85,7 @@ const createHeader = function() {
 showHeader(JSON.parse(sessionStorage.getItem('currentHeader')));
     return;
   }
-  makeRequest("GET", 'https://nathanti.repl.co/api/get-header', {})
+  makeRequest("GET", '/api/header.json', {})
   .then((datas) => {
     sessionStorage.setItem("currentHeader", JSON.stringify(datas));
     showHeader(datas);
