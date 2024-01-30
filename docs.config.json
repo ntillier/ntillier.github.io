@@ -1,0 +1,15 @@
+
+{
+  "title": "nathanTi",
+  "favicon": "/profile.png",
+  "header": {
+    "title": "nathanTi",
+    "icon": "/profile.png",
+    "links": [
+      {
+        "label": "GitHub",
+        "link": "https://github.com/ntillier"
+      }
+    ]
+  }
+}
