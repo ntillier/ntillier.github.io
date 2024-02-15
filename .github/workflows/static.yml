@@ -2,7 +2,7 @@
 name: Deploy static content to Pages
 
 env:
-  GH_TOKEN: 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
+  GITHUB_TOKEN: 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
   
 on:
   # Runs on pushes targeting the default branch
@@ -63,4 +63,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           branch: gh-pages
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
