@@ -38,6 +38,7 @@ jobs:
         run: |
           npm i @nathanti/easydocs -g
           easydocs build
+          cd ./.build
 
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
@@ -47,6 +48,10 @@ jobs:
       #    cd ./.build
       #    git checkout -b gh-pages
       #    git push -u origin gh-pages
+
+      # Test
+      - name: Test
+        run: ls .
 
       # Pushing changes...
       - name: Push vers une branche existante
