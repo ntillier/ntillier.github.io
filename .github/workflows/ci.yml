@@ -41,11 +41,9 @@ jobs:
           easydocs build
           cd ./.build
           git init
-          git checkout -b gh-pages
           git add .
           git commit -m "Autocommit"
-          git remote add origin https://github.com/${{ github.repository }}
-          git push --force origin gh-pages
+          git push --force https://github.com/${{ github.repository }} gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
