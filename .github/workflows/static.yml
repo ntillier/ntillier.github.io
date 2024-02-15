@@ -49,5 +49,5 @@ jobs:
           cd ./.build
           git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
           git checkout -b gh-pages
-          git push
+          git push -u origin gh-pages
           
