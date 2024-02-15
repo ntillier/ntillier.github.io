@@ -26,9 +26,9 @@ jobs:
       # Checkout
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+        #with:
+          #persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          #fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
       # Configuration
       - name: Configure Git Credentials
@@ -42,9 +42,12 @@ jobs:
           npm i @nathanti/easydocs -g
           easydocs build
           cd ./.build
-          ls .
+          git init
+          git add origin https://github.com/${{ github.repository }}
+          git checkout -b gh-pages
           git add .
-          git commit -a -m "Autoupdate"
+          git commit -a -m "Autocommit"
+          git push --force
 
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
@@ -56,13 +59,13 @@ jobs:
       #    git push -u origin gh-pages
 
       # Test
-      - name: Test
-        run: ls .
+      #- name: Test
+      #  run: ls .
 
       # Pushing changes...
-      - name: Push vers une branche existante
-        uses: ad-m/github-push-action@master
-        with:
-          branch: gh-pages
-          force_with_lease: true
+      #- name: Push vers une branche existante
+      #  uses: ad-m/github-push-action@master
+      #  with:
+      #    branch: gh-pages
+      #    force_with_lease: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
