@@ -37,6 +37,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Configuration
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
       # Run build command
       - name: Run build
         run: |
@@ -46,9 +52,15 @@ jobs:
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
       # git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
-      - name: Push changes
-        run: |
-          cd ./.build
-          git checkout -b gh-pages
-          git push -u origin gh-pages
-          
+      #- name: Push changes
+      #  run: |
+      #    cd ./.build
+      #    git checkout -b gh-pages
+      #    git push -u origin gh-pages
+
+      # Pushing changes...
+      - name: Push vers une branche existante
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          github_token: ${{ secrets.GH_TOKEN }}
