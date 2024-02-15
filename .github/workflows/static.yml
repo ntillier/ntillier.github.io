@@ -48,7 +48,7 @@ jobs:
       - name: Push changes
         run: |
           cd ./.build
-          git remote add origin {{ github.repositoryUrl }}
+          git remote add origin https://github.com/${{ github.repository }}
           git checkout -b gh-pages
           git push -u origin gh-pages
           
