@@ -26,10 +26,7 @@ jobs:
       # Checkout
       - name: Checkout
         uses: actions/checkout@v4
-        #with:
-          #persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          #fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-
+        
       # Configuration
       - name: Configure Git Credentials
         run: |
@@ -68,4 +65,4 @@ jobs:
       #  with:
       #    branch: gh-pages
       #    force_with_lease: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      #    github_token: ${{ secrets.GITHUB_TOKEN }}
