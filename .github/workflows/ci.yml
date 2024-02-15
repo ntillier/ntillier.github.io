@@ -40,8 +40,14 @@ jobs:
           npm i @nathanti/easydocs -g
           easydocs build
           cd ./.build
-          git branch -b
+          git branch
+          echo "---"
+          git branch -r
           git init
+          echo "---"
+          git branch
+          echo "---"
+          git branch -r
           git branch -b
           git add .
           git commit -m "Autocommit"
