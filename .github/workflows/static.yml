@@ -47,6 +47,7 @@ jobs:
       - name: Push changes
         run: |
           cd ./.build
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}/gh-pages
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
+          git checkout -b gh-pages
           git push
           
