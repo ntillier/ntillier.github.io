@@ -1,6 +1,9 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
+env:
+  GH_TOKEN: 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
+  
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -29,17 +32,21 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+
+      # Checkout
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: './.build'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-      - run: npm i @nathanti/easydocs -g
-      - run: easydocs build
+
+      # Run build command
+      - name: Run build
+        run: |
+          npm i @nathanti/easydocs -g
+          easydocs build
+
+      # Push changes
+      - name: Push changes
+        run: |
+          cd ./.build
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}/gh-pages
+          git push
+          
