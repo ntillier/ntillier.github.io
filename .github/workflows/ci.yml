@@ -43,6 +43,7 @@ jobs:
           easydocs build
           cd ./.build
           ls .
+          git add .
           git commit -a -m "Autoupdate"
 
       # Push changes
