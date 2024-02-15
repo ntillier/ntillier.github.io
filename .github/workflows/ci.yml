@@ -39,17 +39,9 @@ jobs:
         run: |
           npm i @nathanti/easydocs -g
           easydocs build
-          cd ./.build
           git remote -v
-          echo "---"
-          git branch
-          echo "---"
-          git branch -r
-          git init
-          echo "---"
-          git branch
-          echo "---"
-          git branch -r
+          cd ./.build
+          git checkout gh-pages
           git add .
           git commit -m "Autocommit"
           git push --force https://github.com/${{ github.repository }} gh-pages
