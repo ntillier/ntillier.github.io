@@ -40,7 +40,9 @@ jobs:
           npm i @nathanti/easydocs -g
           easydocs build
           cd ./.build
+          git branch -b
           git init
+          git branch -b
           git add .
           git commit -m "Autocommit"
           git push --force https://github.com/${{ github.repository }} gh-pages
