@@ -37,8 +37,6 @@ jobs:
       # git remote add origin https://github.com/${{ github.repository }}
       - name: Run build
         run: |
-          echo "${{ github.repository }}"
-          echo "{{ github.repository }}""
           npm i @nathanti/easydocs -g
           easydocs build
           cd ./.build
@@ -46,7 +44,6 @@ jobs:
           git add .
           git commit -m "Autocommit"
           git remote add origin https://github.com/${{ github.repository }}
-          git checkout -b gh-pages
           git push --force origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
