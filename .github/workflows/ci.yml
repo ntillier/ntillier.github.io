@@ -43,6 +43,7 @@ jobs:
           git init
           git add .
           git commit -m "Autocommit"
+          git checkout -b gh-pages
           git push --force origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
