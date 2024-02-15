@@ -44,11 +44,11 @@ jobs:
           easydocs build
 
       # Push changes
+      # git remote add origin https://github.com/${{ github.repository }}
       # git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
       - name: Push changes
         run: |
           cd ./.build
-          git remote add origin https://github.com/${{ github.repository }}
           git checkout -b gh-pages
           git push -u origin gh-pages
           
