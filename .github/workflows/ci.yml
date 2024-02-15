@@ -34,6 +34,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
         
       # Run build command
+      # git remote add origin https://github.com/${{ github.repository }}
       - name: Run build
         run: |
           npm i @nathanti/easydocs -g
@@ -42,9 +43,10 @@ jobs:
           git init
           git add .
           git commit -m "Autocommit"
-          git remote add origin https://github.com/${{ github.repository }}
           git push --force origin gh-pages
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
       # git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
