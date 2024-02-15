@@ -40,11 +40,10 @@ jobs:
           easydocs build
           cd ./.build
           git init
-          git add origin https://github.com/${{ github.repository }}
-          git checkout -b gh-pages
           git add .
           git commit -a -m "Autocommit"
-          git push --force
+          git remove add origin https://github.com/${{ github.repository }}
+          git push -u origin gh-pages --force
 
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
