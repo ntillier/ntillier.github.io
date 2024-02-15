@@ -37,6 +37,8 @@ jobs:
       # git remote add origin https://github.com/${{ github.repository }}
       - name: Run build
         run: |
+          echo "${{ github.repository }}"
+          echo "{{ github.repository }}""
           npm i @nathanti/easydocs -g
           easydocs build
           cd ./.build
