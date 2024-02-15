@@ -1,8 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
-
-env:
-  GITHUB_TOKEN: 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
   
 on:
   # Runs on pushes targeting the default branch
