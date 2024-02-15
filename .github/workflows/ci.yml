@@ -37,9 +37,9 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git init
           git add .
-          git commit -a -m "Autocommit"
-          git remove add origin https://github.com/${{ github.repository }}
-          git push -u origin gh-pages --force
+          git commit -m "Autocommit"
+          git remote add origin https://github.com/${{ github.repository }}
+          git push --force origin gh-pages
 
       # Push changes
       # git remote add origin https://github.com/${{ github.repository }}
