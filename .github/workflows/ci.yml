@@ -43,6 +43,7 @@ jobs:
           git init
           git add .
           git commit -m "Autocommit"
+          git remote add origin https://github.com/${{ github.repository }}
           git checkout -b gh-pages
           git push --force origin gh-pages
         env:
