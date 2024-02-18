@@ -39,16 +39,14 @@ jobs:
         run: |
           npm i @nathanti/easydocs -g
           easydocs build
+
+      # Push the changes
       - name: Push changes
-        working-directory: ./.build
         run: |
-          ls .
-          git remote -v
-          git rev-parse --abbrev-ref HEAD
+          cd ./.build
           git switch -c gh-pages
-          git rev-parse --abbrev-ref HEAD
           git add .
-          git commit -m "Autocommit"
+          git commit -m "Easydocs Build - autocommit"
           git push --force https://github.com/${{ github.repository }} gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
