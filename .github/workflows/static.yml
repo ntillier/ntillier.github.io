@@ -28,16 +28,9 @@ jobs:
       # Checkout
       - name: Checkout
         uses: actions/checkout@v4
-
-      # Configuration
-      - name: Configure Git Credentials
-        run: |
-          git config --global user.name github-actions[bot]
-          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
         
       # Run build command
-      # git remote add origin https://github.com/${{ github.repository }}
-      - name: Run build
+      - name: Build
         run: |
           npm i @nathanti/easydocs -g
           easydocs build
@@ -50,14 +43,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
-      # Push the changes
-      #- name: Push changes
-      #  run: |
-      #    cd ./.build
-      #    git switch -c gh-pages
-      #    git add .
-      #    git commit -m "Easydocs Build - autocommit"
-      #    git push --force https://github.com/${{ github.repository }} gh-pages
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
