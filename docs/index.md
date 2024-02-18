@@ -60,11 +60,11 @@ The order of the projects doesn't really matter. As a general rule, the most rec
 !!! warning All these projects are either archived, and will not be maintained anymore. I keep them here for prosperity and to keep them in mind more than anything else 😉
 !!!
 
-## Khan Academy
+### Khan Academy
 - [Hangman game](https://www.khanacademy.org/computer-programming/hangman-game/6256858961592320)
 - [KA's old presentation](https://www.khanacademy.org/computer-programming/kas-old-presentation/5124988983099392)
 
-## Replit
+### Replit
 !!! info Info
 Since Replit has discontinued free hosting, all the websites below may work, but you won't be able to preview them. See [this](https://blog.replit.com/hosting-changes) post for more information.
 !!!
