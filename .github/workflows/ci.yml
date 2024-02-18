@@ -40,34 +40,22 @@ jobs:
           npm i @nathanti/easydocs -g
           easydocs build
 
+      # Publish the pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
       # Push the changes
-      - name: Push changes
-        run: |
-          cd ./.build
-          git switch -c gh-pages
-          git add .
-          git commit -m "Easydocs Build - autocommit"
-          git push --force https://github.com/${{ github.repository }} gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-      # Push changes
-      # git remote add origin https://github.com/${{ github.repository }}
-      # git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
       #- name: Push changes
       #  run: |
       #    cd ./.build
-      #    git checkout -b gh-pages
-      #    git push -u origin gh-pages
-
-      # Test
-      #- name: Test
-      #  run: ls .
-
-      # Pushing changes...
-      #- name: Push vers une branche existante
-      #  uses: ad-m/github-push-action@master
-      #  with:
-      #    branch: gh-pages
-      #    force_with_lease: true
-      #    github_token: ${{ secrets.GITHUB_TOKEN }}
+      #    git switch -c gh-pages
+      #    git add .
+      #    git commit -m "Easydocs Build - autocommit"
+      #    git push --force https://github.com/${{ github.repository }} gh-pages
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
