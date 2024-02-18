@@ -42,8 +42,11 @@ jobs:
       - name: Push changes
         working-directory: ./.build
         run: |
+          ls .
           git remote -v
+          git rev-parse --abbrev-ref HEAD
           git checkout gh-pages
+          git rev-parse --abbrev-ref HEAD
           git add .
           git commit -m "Autocommit"
           git push --force https://github.com/${{ github.repository }} gh-pages
