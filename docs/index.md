@@ -10,6 +10,9 @@ The order of the projects doesn't really matter. As a general rule, the most rec
 
 # Projects
 
+## Github
+- [Ressources (en français)](https://github.com/ntillier/Ressources)
+
 ## Khan Academy
 - [Euclide's algorithm](https://www.khanacademy.org/computer-programming/euclide/5541978721927168)
 - [Dijkstra's algorithm](https://www.khanacademy.org/computer-programming/dijkstra-algorithm/5030266773094400)
