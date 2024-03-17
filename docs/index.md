@@ -1,8 +1,8 @@
 # Hi there 👋
 
-My name is Nathan, and I am currently a high school student. I like many things, such as coding, reading, doing something related with maths and physic, and so many things...
+My name is Nathan, and I am currently a high school student. I enjoy coding, reading, playing basketball or doing something related with maths and physic.
 
-Besides this short presentation, I use this website to list some of the projects I made, what I am currently involved, and nothing much more 😂.
+Besides this short presentation, I use this website to list some of the projects I made, what I am currently involved, and nothing much more...
 
 !!! info Note
 The order of the projects doesn't really matter. As a general rule, the most recent are placed first.
@@ -14,6 +14,7 @@ The order of the projects doesn't really matter. As a general rule, the most rec
 - [Ressources (en français)](https://github.com/ntillier/Ressources)
 
 ## Khan Academy
+- [A* algorithm](https://www.khanacademy.org/computer-programming/a/6346280991899648)
 - [Euclide's algorithm](https://www.khanacademy.org/computer-programming/euclide/5541978721927168)
 - [Dijkstra's algorithm](https://www.khanacademy.org/computer-programming/dijkstra-algorithm/5030266773094400)
 - [Physique - Chute libre](https://www.khanacademy.org/computer-programming/physique-chute-libre/6093678011662336)
