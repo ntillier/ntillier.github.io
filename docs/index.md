@@ -75,3 +75,6 @@ Since Replit has discontinued free hosting, all the websites below may work, but
 - [Apps](https://apps.nathanti.repl.co)
 - [NodeJs backend for website (template)](https://nodejs-backend-for-website.nathanti.repl.co/)
 - [Drawing App](https://drawing-app.nathanti.repl.co/)
+
+
+[![](https://visitcount.itsvg.in/api?id=nathanTi&label=Profile%20Views&color=2&icon=0&pretty=true)](https://visitcount.itsvg.in)
